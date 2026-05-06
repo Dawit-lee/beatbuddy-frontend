@@ -94,11 +94,12 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-import { useRouter } from 'vue-router';
+import { useRouter, useRoute } from 'vue-router';
 import { useMusicStore } from '@/stores/music';
 import { saveTaste, updateTaste } from '@/api/music';
 
 const router = useRouter()
+const route = useRoute()
 const musicStore = useMusicStore()
 
 // 저장 중 상태
@@ -153,7 +154,7 @@ const handleSave = async () => {
             }))
         }
 
-        if (musicStore.isEditMode) {
+        if (musicStore.isEditMode || route.query.mode === 'edit') {
             // 수정 모드면 PUT
             const result = await updateTaste(payload)
             console.log('수정 저장 성공:', result)
