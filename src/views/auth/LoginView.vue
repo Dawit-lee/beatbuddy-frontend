@@ -13,7 +13,7 @@
         <label>이메일</label>
         <v-text-field
           v-model="email"
-          placeholder="이메일을 입력하세요"
+          placeholder="이메일을 입력하세요."
           :rules="emailRules"
           hide-details="auto"
           variant="solo"
