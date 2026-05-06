@@ -25,7 +25,7 @@ pipeline {
     }
 
     environment {
-        DOCKER_IMAGE_NAME = "huisuz/beatbuddy-frontend"
+        DOCKER_IMAGE_NAME = "dawitlee/beatbuddy-frontend"
         DOCKER_CREDENTIALS_ID = "dockerhub-access"
     }
 
