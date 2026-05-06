@@ -26,7 +26,7 @@ pipeline {
 
     environment {
         DOCKER_IMAGE_NAME = "dawitlee/beatbuddy-frontend"
-        DOCKER_CREDENTIALS_ID = "dockerhub-access"
+        DOCKER_CREDENTIALS_ID = "docker-hub-credentials"
     }
 
     stages {
